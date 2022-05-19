@@ -1,0 +1,232 @@
+.modal {
+    /* display: none; */
+    /* position: fixed; */
+    position: fixed;
+    top: 10%;
+    left: 81%;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.6);
+    height: auto;
+    width: 360px;
+    margin-right: 0;
+    
+}
+.modal button {
+    outline: none;
+    cursor: pointer;
+    border: 0;
+}
+.modal > section {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-show 0.3s;
+    height: auto;
+    overflow: hidden;
+}
+.modal > section > header {
+    position: relative;
+    padding: 16px 64px 16px 16px;
+    background-color: #fff;
+    font-weight: 700;
+}
+.modal > section > header button {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    width: 20px;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    color: #0e0d0d;
+    background-color: transparent;
+}
+.modal > section > main {
+    height: auto;
+    padding: 16px;
+    border-bottom: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+}
+.modal > section > footer {
+    padding: 12px 16px;
+    text-align: right;
+}
+.modal > section > footer button {
+    margin-bottom: 5px;
+    padding: 6px 12px;
+    color: black;
+    background-color: #ff9054;
+    border-radius: 5px;
+    font-size: 13px;
+    border: 1px solid black;
+}
+.modal.openModal {
+    display: flex;
+    align-items: center;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-bg-show 0.3s;
+}
+
+.modal > section > main > .walmaintxt {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+    background: rgba(22, 99, 171, 0.6);
+    width: 140px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.modal > section > main > .waltxt {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #392f31;
+}
+.modal > section > main > .walinput {
+    width: 200px;
+    /* margin: auto; */
+    margin-top: 30px;
+    /* margin-bottom: 0px; */
+    margin-left: 40px;
+    border: none;
+    outline: none;
+    color: #392f31;
+    border-bottom: 2px solid #392f31;
+    padding-left: 10px;
+}
+
+.modal > section > main > .walmakebtn {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.modal > section > main > .walmake >.walmakebtn{
+    position:relative;
+    left:40%;
+    transform: translateX(-50%);
+    width:80%;
+    height:40px;
+    border-radius: 40px;
+    background: linear-gradient(125deg,#ff9054,#ffffb0,#f59ca3);
+    background-position: left;
+    background-size: 200%;
+    color:#392f31;
+    font-size: 1.1rem;
+    font-weight: 900;
+    /* border:0.1px solid black; */
+    cursor:pointer;
+    transition: 0.4s;
+    display:inline;
+    margin-top: 50px;
+}
+
+.modal > section > main > .walmake >.walmakebtn:hover {
+    background-position: right;
+}
+
+.wal_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.wal_id {
+    width: 50%;
+    border: solid 1px;
+}
+
+.wal_balance {
+    width: 50%;
+    border: solid 1px;
+}
+
+.wal_container {
+    /* display: flex; */
+    margin-top: 5%;
+    text-align: center;
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    
+}
+.wal_select {
+    size: 10px;
+}
+.coin-logo {
+    border-radius: 100%;
+    width: 12.5rem;
+    height: 11.25rem;
+    /* text-align: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.logo-container {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.walmake {
+    text-align: center;
+}
+.wal-header {
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: underline;
+}
+
+.wal-public {
+    cursor: pointer;
+}
+.wal-private {
+    cursor: pointer;
+}
+.wal-balance {
+    font-size: 1.5rem
+}
+.wal-send-input {
+    margin-left: 15%;
+    margin-top: 5px;
+    height: 38px;
+    width: 70%;
+    /* justify-content: center; */
+}
+.wal-send-input-box {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.wal-send-header {
+    /* margin-left: 30px; */
+    margin-top: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    /* text-decoration: underline; */
+}
+
+@keyframes modal-show {
+    from {
+        opacity: 0;
+        margin-top: -50px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes modal-bg-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* .outer-modal {
+    z-index: 3;
+    position: absolute;
+    right: 0;
+} */
